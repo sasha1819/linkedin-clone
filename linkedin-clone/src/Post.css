@@ -12,6 +12,7 @@
 
 .post__info{
     margin-left: 10px;
+    
 }
 
 .post__info >p{
@@ -25,4 +26,9 @@
 
 .post__info > h2{
     font-size: 15px;
+}
+
+.Post__buttons{
+    display: flex;
+    justify-content: space-evenly;
 }
