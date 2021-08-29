@@ -23,12 +23,12 @@ function Post({name, description, massage, photoUrl }) {
         <div className="Post__buttons">
             <InputOption Icon ={ThumbUpAltOutLinedIcon } title ="Like"
             color="gray"/>
-            {/* <InputOption Icon ={ChatOutlinedIcon} title ="Comment"
+            <InputOption Icon ={ChatOutlinedIcon} title ="Comment"
             color="gray"/> 
             <InputOption Icon ={ShareOutLinedIcon} title ="Share"
             color="gray"/>
             <InputOption Icon ={SendOutLinedIcon} title ="Send"
-            color="gray"/> */}
+            color="gray"/>
         </div>
     </div>
     );
