@@ -6,7 +6,6 @@ import {ChatOutlined, SendOutlined, ShareOutlined, ThumbUpAltOutlined} from "@ma
 
 
 
-
 function Post({name, description, massage, photoUrl }) {
     return( <div className="post">
         <div className="post__header">
