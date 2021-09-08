@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Feed.css';
 import CreateIcone from "@material-ui/icons/Create";
 import ImageIcon from "@material-ui/icons/Image";
@@ -7,8 +7,9 @@ import SubscriptionsIcon from "@material-ui/icons/Subscriptions";
 import EventNoteIcon from "@material-ui/icons/EventNote";
 import CalendarViewDayIcon from "@material-ui/icons/CalendarViewDay";
 import Post from './Post';
-import { db } from './firebase';
-import firebase from "firebase";
+import {db} from 'firebase';
+
+
 
 function Feed() {
     const [input, setInput] = useState("");
@@ -34,7 +35,7 @@ function Feed() {
             description: "this is a test",
             massage: input,
             photoUrl: "",
-            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            new: date(),
 
         });
     };
@@ -56,16 +57,19 @@ function Feed() {
                         <InputOption Icon={CalendarViewDayIcon} title="Write article" color="#7FC15E" />
                 </div>
             </div>
+
             {/* Posts */}
-            {posts.map(({id,data:{name, description, massage, photoUrl} }) => (
-                <Post/>
-            ))}
+            {posts.map(({id, data: {name, description, massage, 
+            photoUrl} }) => (
             
             <Post
-             name="Alexander Pochtarenko" 
-            description="This is a test" 
-            massage="WOW This work"
+            key={id}
+            name={name}
+            description={description} 
+            massage={massage}
+            photoUrl={photoUrl}
             />
+            ))}
         </div>
     );
 }
